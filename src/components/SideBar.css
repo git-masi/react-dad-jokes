@@ -1,6 +1,64 @@
 .SideBar {
   margin-left: 5%;
   height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex: 1;
+
   background: var(--clr-purple-dark);
+  box-shadow: 0 .5rem .8rem rgba(0,0,0,.6);
+}
+
+.SideBar > h1 {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--clr-gray-lighter);
+  text-shadow: 0 .2rem .4rem rgba(0,0,0,.6);
+}
+
+.SideBar > h1 > span {
+  font-weight: 700;
+}
+
+.SideBar img {
+  width: 85%;
+  max-width: 200px;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 0 .4rem .7rem rgba(0,0,0,.7);
+}
+
+.SideBar button {
+  transition: all 300ms;
+}
+
+.SideBar button,
+.SideBar button:focus {
+  margin-top: 3rem;
+  padding: 1rem 1.5rem;
+  font-size: 2rem;
+
+  color: var(--clr-gray-lighter);
+  background: linear-gradient(135deg,
+    var(--clr-blue-light),
+    var(--clr-blue-light) 50%,
+    var(--clr-pink-light) 50%,
+    var(--clr-pink-light));
+  border: none;
+  border-radius: 5rem;
+  outline: 0;
+  cursor: pointer;
+}
+
+.SideBar button:hover {
+  box-shadow: 0 .4rem .7rem rgba(0,0,0,.6);
+  transform: translateY(-.3rem);
+}
+
+.SideBar button:focus {
+  box-shadow: 0 .1rem .3rem rgba(0,0,0,.8);
+  transform: translateY(-.1rem);
 }

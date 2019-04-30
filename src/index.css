@@ -11,6 +11,7 @@ html {
   --clr-gray-light: #b2bec3;
   --clr-gray-dark: #636e72;
   --clr-gray-darker: #2d3436;
+  --clr-gray-darkest: #16191a;
 }
 
 * {
@@ -22,6 +23,7 @@ html {
 body {
   height: 100%;
 
+  color: var(--clr-gray-darkest);
   background-color: var(--clr-gray-lighter);
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
