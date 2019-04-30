@@ -61,6 +61,7 @@
 
 .Joke-text {
   flex: 1;
+  font-size: 1.4rem;
 }
 
 .Joke i.em {

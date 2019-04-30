@@ -6,6 +6,8 @@ class Joke extends Component {
     super(props);
     this.voteUp = this.voteUp.bind(this);
     this.voteDown = this.voteDown.bind(this);
+    this.getColor =this.getColor.bind(this);
+    this.getEmoji =this.getEmoji.bind(this);
   }
 
   voteUp() {
@@ -35,6 +37,7 @@ class Joke extends Component {
         return "#f44336";
     }
   }
+
   getEmoji() {
     const votes = this.props.votes;
     switch (true) {
