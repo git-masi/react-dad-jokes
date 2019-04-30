@@ -1,4 +1,15 @@
 .JokeUI {
   height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(128deg,
+    var(--clr-blue-light),
+    var(--clr-blue-light) 59%,
+    var(--clr-gray-lighter)59%,
+    var(--clr-gray-lighter)60%,
+    var(--clr-pink-light) 60%,
+    var(--clr-pink-light));
 }

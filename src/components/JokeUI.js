@@ -5,7 +5,9 @@ import JokeList from './JokeList';
 class JokeUI extends Component {
   render() {
     return (
-      <JokeList />
+      <div className="JokeUI">
+        <JokeList />
+      </div>
     )
   }
 }

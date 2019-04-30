@@ -22,7 +22,7 @@ html {
 body {
   height: 100%;
 
-  background-color: aliceblue;
+  background-color: var(--clr-gray-lighter);
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
