@@ -72,3 +72,21 @@
   background-clip: border-box;
   box-shadow: 0 .3rem .7rem rgba(0,0,0,0.4);
 }
+
+@media screen and (max-width: 700px) {
+  .Joke-text {
+    padding: .3rem 0;
+    height: 100%;
+  
+    flex: 1;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    font-size: 1.4rem;
+  }
+  
+  .Joke-text::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
+  }
+}

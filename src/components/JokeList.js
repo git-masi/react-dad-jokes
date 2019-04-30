@@ -25,6 +25,7 @@ class JokeList extends Component {
       if (!oldJokes.includes(joke)) newJokes.push(joke);
     }
     this.setState({jokes: [...oldJokes, ...newJokes]});
+    window.localStorage.setItem('jokes', JSON.stringify([...oldJokes, ...newJokes]));
   };
 
   voteHandler(id, plusMinus) {
