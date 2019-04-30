@@ -3,9 +3,17 @@
   padding: 1rem;
   height: 70%;
   flex: 3;
-  overflow: auto;
   z-index: 1;
+  
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 
   background: var(--clr-gray-lighter);
   box-shadow: 0 .5rem .8rem rgba(0,0,0,.6);
+}
+
+.JokeList::-webkit-scrollbar { 
+  width: 0;
+  height: 0;
 }
