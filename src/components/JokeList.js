@@ -14,9 +14,14 @@ class JokeList extends Component {
       jokes: window.localStorage.getItem('jokes') ? JSON.parse(window.localStorage.getItem('jokes')) : []
     };
     this.voteHandler = this.voteHandler.bind(this);
+    this.getJokes = this.getJokes.bind(this);
   };
 
-  async componentDidMount() {
+  componentDidMount() {
+    if (this.state.jokes.length === 0) this.getJokes();
+  };
+
+  async getJokes() {
     const oldJokes = [...this.state.jokes];
     let newJokes = [];
     while (newJokes.length < this.props.numJokesToGet) {
@@ -26,7 +31,7 @@ class JokeList extends Component {
     }
     this.setState({jokes: [...oldJokes, ...newJokes]});
     window.localStorage.setItem('jokes', JSON.stringify([...oldJokes, ...newJokes]));
-  };
+  }
 
   voteHandler(id, plusMinus) {
     this.setState(this.state.jokes.map(joke => {
