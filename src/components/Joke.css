@@ -1,5 +1,5 @@
 .Joke {
-  height: 5rem;
+  height: 6rem;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -13,7 +13,12 @@
 }
 
 .Joke-vote-container {
+  height: 100%;
   margin: 0 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .Joke-vote-container .fa-thumbs-up,
@@ -25,7 +30,7 @@
 
 .Joke-vote-container .fa-thumbs-up:hover,
 .Joke-vote-container .fa-thumbs-down:hover {
-  transform: rotate(45deg);
+  transform: rotate(35deg);
 }
 
 .Joke-vote-container .fa-thumbs-up {
@@ -37,13 +42,32 @@
 }
 
 .Joke-votes {
+  height: 4rem;
+  width: 4rem;
   margin: 0 .5rem;
   padding: .5rem 1.2rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+
   font-size: 1.8rem;
-  border: .1rem solid black;
+  background: whitesmoke;
+  border-width: .1rem;
+  border-style: solid;
   border-radius: 50%;
+  box-shadow: 0 .3rem .9rem rgba(0,0,0,0.6);
 }
 
 .Joke-text {
   flex: 1;
+}
+
+.Joke i.em {
+  margin: 0 1rem;
+  font-size: 2.7rem;
+
+  border-radius: 50%;
+  background-clip: border-box;
+  box-shadow: 0 .3rem .7rem rgba(0,0,0,0.4);
 }
