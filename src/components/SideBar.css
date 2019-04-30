@@ -1,0 +1,6 @@
+.SideBar {
+  margin-left: 5%;
+  height: 80%;
+  flex: 1;
+  background: var(--clr-purple-dark);
+}
