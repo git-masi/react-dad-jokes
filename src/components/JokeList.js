@@ -11,7 +11,7 @@ class JokeList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      jokes: [{jokeText: "What does a pirate pay for his corn? A buccaneer!", id: "QuscibaMClb", votes: 0}]
+      jokes: window.localStorage.getItem('jokes') ? JSON.parse(window.localStorage.getItem('jokes')) : []
     };
     this.voteHandler = this.voteHandler.bind(this);
   };
