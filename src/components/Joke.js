@@ -7,10 +7,10 @@ class Joke extends Component {
       <div className="Joke">
         <div className="Joke-vote-container">
           <i className="far fa-thumbs-up"></i>
-          <span>{this.props.votes}</span>
+          <span className="Joke-votes">{this.props.votes}</span>
           <i className="far fa-thumbs-down"></i>
         </div>
-        <div>{this.props.text}</div>
+        <div className="Joke-text">{this.props.text}</div>
         {/* <div>emoji goes here</div> */}
       </div>
     )

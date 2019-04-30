@@ -1,7 +1,49 @@
 .Joke {
+  height: 5rem;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
   align-items: center;
+
+  border-bottom: .1rem solid var(--clr-gray-darkest);
+}
+
+.Joke:nth-of-type(even) {
+  background: whitesmoke;
+}
+
+.Joke-vote-container {
+  margin: 0 1rem;
+}
+
+.Joke-vote-container .fa-thumbs-up,
+.Joke-vote-container .fa-thumbs-down {
+  cursor: pointer;
+  text-shadow: 0 .2rem .4rem rgba(0,0,0,0.4);
+  transition: all 280ms;
+}
+
+.Joke-vote-container .fa-thumbs-up:hover,
+.Joke-vote-container .fa-thumbs-down:hover {
+  transform: rotate(45deg);
+}
+
+.Joke-vote-container .fa-thumbs-up {
+  color: var(--clr-green);
+}
+
+.Joke-vote-container .fa-thumbs-down {
+  color: var(--clr-red);
+}
+
+.Joke-votes {
+  margin: 0 .5rem;
+  padding: .5rem 1.2rem;
+  font-size: 1.8rem;
+  border: .1rem solid black;
+  border-radius: 50%;
+}
+
+.Joke-text {
+  flex: 1;
 }
