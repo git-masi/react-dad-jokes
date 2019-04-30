@@ -1,6 +1,11 @@
 .JokeList {
   margin-right: 5%;
+  padding: 1rem;
   height: 70%;
   flex: 3;
   overflow: auto;
+  z-index: 1;
+
+  background: var(--clr-gray-lighter);
+  box-shadow: 0 .5rem .8rem rgba(0,0,0,.6);
 }
