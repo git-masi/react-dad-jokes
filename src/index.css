@@ -3,14 +3,15 @@ html {
   font-size: 62.5%;
 }
 
-/* :root {
-  --clr-primary: ;
-  --clr-primary-dark: ;
-  --clr-primary-light: ;
-  --animation-time: ;
-
-  --nav-height: ;
-} */
+:root {
+  --clr-pink-light: #fd79a8;
+  --clr-blue-light: #74b9ff;
+  --clr-purple-dark: #6c5ce7;
+  --clr-gray-lighter: #dfe6e9;
+  --clr-gray-light: #b2bec3;
+  --clr-gray-dark: #636e72;
+  --clr-gray-darker: #2d3436;
+}
 
 * {
   margin: 0;
