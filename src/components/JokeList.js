@@ -13,7 +13,8 @@ class JokeList extends Component {
     this.state = {
       jokes: [{jokeText: "What does a pirate pay for his corn? A buccaneer!", id: "QuscibaMClb", votes: 0}]
     };
-  }
+    this.voteHandler = this.voteHandler.bind(this);
+  };
 
   async componentDidMount() {
     const oldJokes = [...this.state.jokes];
@@ -24,9 +25,15 @@ class JokeList extends Component {
       if (!oldJokes.includes(joke)) newJokes.push(joke);
     }
     this.setState({jokes: [...oldJokes, ...newJokes]});
-    // console.log(this.state.jokes);
-  }
+  };
 
+  voteHandler(id, plusMinus) {
+    this.setState(this.state.jokes.map(joke => {
+        if(joke.id === id) joke.votes += plusMinus;
+        return joke;
+      }
+    ))
+  };
   
   render() {
     const displayJokes = this.state.jokes.map(joke => (
@@ -35,6 +42,7 @@ class JokeList extends Component {
         id={joke.id}
         key={joke.id}
         votes={joke.votes}
+        click={this.voteHandler}
       />
     ));
 
