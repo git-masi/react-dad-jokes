@@ -63,7 +63,7 @@ class JokeList extends Component {
     ));
 
     return (
-      <div className="JokeList">
+      <div className="JokeList" style={{display: this.props.hide ? 'none' : null}}>
         {displayJokes}
       </div>
     )

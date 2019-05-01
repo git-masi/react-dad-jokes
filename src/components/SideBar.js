@@ -8,7 +8,7 @@ class SideBar extends Component {
       <div className="SideBar">
         <h1><span>Dad</span> Jokes</h1>
         <img src={cryLaughEmoji} alt="crying laughing emoji"/>
-        <button onClick={this.props.click} className="SidebarButton">Get Jokes</button>
+        <button onClick={this.props.click} className="SidebarButton" disabled={this.props.disabled}>Get Jokes</button>
       </div>
     )
   }
