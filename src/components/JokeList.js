@@ -13,6 +13,9 @@ class JokeList extends Component {
     this.state = {
       jokes: window.localStorage.getItem('jokes') ? JSON.parse(window.localStorage.getItem('jokes')) : []
     };
+    console.log(this.state.jokes);
+    this.seenJokes = new Set(this.state.jokes.map(joke => joke.id));
+    console.log(this.seenJokes);
     this.voteHandler = this.voteHandler.bind(this);
     this.getJokes = this.getJokes.bind(this);
     this.updateLocalStorage = this.updateLocalStorage.bind(this);
@@ -23,14 +26,18 @@ class JokeList extends Component {
   };
 
   async getJokes() {
-    const oldJokes = [...this.state.jokes];
-    let newJokes = [];
-    while (newJokes.length < this.props.numJokesToGet) {
-      let res = await axios.get('https://icanhazdadjoke.com/', {headers: {Accept: "application/json"}});
-      const joke = {jokeText: res.data.joke, id: res.data.id, votes: 0}
-      if (!oldJokes.includes(joke)) newJokes.push(joke);
+    try {
+      const oldJokes = [...this.state.jokes];
+      let newJokes = [];
+      while (newJokes.length < this.props.numJokesToGet) {
+        let res = await axios.get('https://icanhazdadjoke.co/', {headers: {Accept: "application/json"}});
+        const joke = {jokeText: res.data.joke, id: res.data.id, votes: 0}
+        if (!this.seenJokes.has(joke.id)) newJokes.push(joke);
+      }
+      this.setState({jokes: [...oldJokes, ...newJokes]}, this.updateLocalStorage);
+    } catch(e) {
+      this.props.error(e);
     }
-    this.setState({jokes: [...oldJokes, ...newJokes]}, this.updateLocalStorage());
   }
 
   updateLocalStorage() {
@@ -43,7 +50,7 @@ class JokeList extends Component {
           return joke;
         }
       ),
-      this.updateLocalStorage()
+      this.updateLocalStorage
     )
   };
 

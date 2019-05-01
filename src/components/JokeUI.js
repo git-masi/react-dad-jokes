@@ -10,7 +10,6 @@ class JokeUI extends Component {
     this.state = {
       loading: false
     }
-    this.endLoading = this.endLoading.bind(this);
   }
 
   clickHandler = () => {
@@ -18,18 +17,23 @@ class JokeUI extends Component {
     this.setState({loading: true}, this.endLoading());
   }
 
-  endLoading() {
+  endLoading = () => {
     setTimeout(() => {
       this.setState({loading: false})
     }, 1500);
   }
+
+  errorHandler = (e) => {
+    console.log(e);
+    this.setState({loading: false})
+  } 
 
   render() {
     return (
       <div className="JokeUI">
         <SideBar click={this.clickHandler} disabled={this.state.loading}/>
         <Loader hide={this.state.loading}/>
-        <JokeList ref={toggle => this.toggle = toggle} hide={this.state.loading}/>
+        <JokeList ref={toggle => this.toggle = toggle} hide={this.state.loading} error={this.errorHandler}/>
         <footer className="footer">
           <a href='https://dryicons.com/free-icons/emoji-icons'> Icon by Dryicons </a>
         </footer>
