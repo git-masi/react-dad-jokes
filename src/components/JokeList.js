@@ -15,6 +15,7 @@ class JokeList extends Component {
     };
     this.voteHandler = this.voteHandler.bind(this);
     this.getJokes = this.getJokes.bind(this);
+    this.updateLocalStorage = this.updateLocalStorage.bind(this);
   };
 
   componentDidMount() {
@@ -29,8 +30,11 @@ class JokeList extends Component {
       const joke = {jokeText: res.data.joke, id: res.data.id, votes: 0}
       if (!oldJokes.includes(joke)) newJokes.push(joke);
     }
-    this.setState({jokes: [...oldJokes, ...newJokes]});
-    window.localStorage.setItem('jokes', JSON.stringify([...oldJokes, ...newJokes]));
+    this.setState({jokes: [...oldJokes, ...newJokes]}, this.updateLocalStorage());
+  }
+
+  updateLocalStorage() {
+    window.localStorage.setItem('jokes', JSON.stringify(this.state.jokes));
   }
 
   voteHandler(id, plusMinus) {
@@ -39,7 +43,7 @@ class JokeList extends Component {
           return joke;
         }
       ),
-      () => window.localStorage.setItem('jokes', JSON.stringify(this.state.jokes))
+      this.updateLocalStorage()
     )
   };
 
