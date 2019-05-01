@@ -40,7 +40,11 @@ class JokeList extends Component {
       }
     ))
   };
-  
+
+  jokeButtonHander() {
+    this.getJokes();
+  }
+
   render() {
     const displayJokes = this.state.jokes.map(joke => (
       <Joke
