@@ -4,13 +4,6 @@ import JokeList from './JokeList';
 import SideBar from './SideBar';
   
 class JokeUI extends Component {
-  constructor() {
-    super()
-    this.state = {
-      clicked: false
-    }
-  }
-
   clickHandler = () => {
     this.toggle.jokeButtonHander();
   }
