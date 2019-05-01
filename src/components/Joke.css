@@ -73,6 +73,26 @@
   box-shadow: 0 .3rem .7rem rgba(0,0,0,0.4);
 }
 
+.joke-emoji-animate {
+  transition: all 300ms;
+}
+
+.joke-emoji-animate:hover {
+  animation: rotate-emoji 2s ease infinite forwards;
+}
+
+@keyframes rotate-emoji {
+  from, to {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+}
+
 @media screen and (max-width: 700px) {
   .Joke-text {
     padding: .3rem 0;

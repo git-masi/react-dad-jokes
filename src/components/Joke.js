@@ -62,12 +62,12 @@ class Joke extends Component {
     return (
       <div className="Joke">
         <div className="Joke-vote-container">
-          <i onClick={this.voteUp} className="far fa-thumbs-up"></i>
+          <i onClick={this.voteUp} className="far fa-thumbs-up" role="button"></i>
           <span className="Joke-votes" style={{borderColor: this.getColor()}}>{this.props.votes}</span>
-          <i onClick={this.voteDown} className="far fa-thumbs-down"></i>
+          <i onClick={this.voteDown} className="far fa-thumbs-down" role="button"></i>
         </div>
         <div className="Joke-text">{this.props.text}</div>
-        <i className={this.getEmoji()}></i>
+        <i className={`${this.getEmoji()} joke-emoji-animate`}></i>
       </div>
     )
   }
