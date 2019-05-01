@@ -35,10 +35,12 @@ class JokeList extends Component {
 
   voteHandler(id, plusMinus) {
     this.setState(this.state.jokes.map(joke => {
-        if(joke.id === id) joke.votes += plusMinus;
-        return joke;
-      }
-    ))
+          if(joke.id === id) joke.votes += plusMinus;
+          return joke;
+        }
+      ),
+      () => window.localStorage.setItem('jokes', JSON.stringify(this.state.jokes))
+    )
   };
 
   jokeButtonHander() {
