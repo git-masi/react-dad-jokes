@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/react-dad-jokes/static/css/main.111ec4cd.chunk.css",
+    "main.js": "/react-dad-jokes/static/js/main.1a244090.chunk.js",
+    "main.js.map": "/react-dad-jokes/static/js/main.1a244090.chunk.js.map",
+    "runtime~main.js": "/react-dad-jokes/static/js/runtime~main.a58e043a.js",
+    "runtime~main.js.map": "/react-dad-jokes/static/js/runtime~main.a58e043a.js.map",
+    "static/js/2.ae18236f.chunk.js": "/react-dad-jokes/static/js/2.ae18236f.chunk.js",
+    "static/js/2.ae18236f.chunk.js.map": "/react-dad-jokes/static/js/2.ae18236f.chunk.js.map",
+    "index.html": "/react-dad-jokes/index.html",
+    "precache-manifest.7964cec4033815c0559f67b3913cebd9.js": "/react-dad-jokes/precache-manifest.7964cec4033815c0559f67b3913cebd9.js",
+    "service-worker.js": "/react-dad-jokes/service-worker.js",
+    "static/css/main.111ec4cd.chunk.css.map": "/react-dad-jokes/static/css/main.111ec4cd.chunk.css.map",
+    "static/media/crying-laughing-emoji.svg": "/react-dad-jokes/static/media/crying-laughing-emoji.6fd227e4.svg"
+  }
+}
